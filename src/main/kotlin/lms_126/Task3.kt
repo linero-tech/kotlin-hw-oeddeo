@@ -2,5 +2,9 @@ package lms_126
 
 fun task3(): String {
 
-    return TODO("Replace this 'TODO' with your solution")
+    return """
+        input: height, width
+        area: height * width * 0.5
+        output: area 
+    """
 }
