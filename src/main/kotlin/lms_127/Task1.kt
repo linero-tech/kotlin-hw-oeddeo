@@ -2,5 +2,10 @@ package lms_127
 
 fun task1() {
 
-    TODO("Erase this line and write your solution")
+    println("Country: Cuba")
+    println("Capital: Havana")
+    println("Currency: CUC")
+}
+fun main() {
+    println(task1())
 }
