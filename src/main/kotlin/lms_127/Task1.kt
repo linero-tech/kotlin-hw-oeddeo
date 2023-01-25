@@ -7,5 +7,5 @@ fun task1() {
     println("Currency: CUC")
 }
 fun main() {
-    println(task1())
+   task1()
 }

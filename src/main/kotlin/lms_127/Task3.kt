@@ -1,6 +1,9 @@
 package lms_127
 
 fun task3(radius: Double): Double {
-
-    return TODO("Replace this 'TODO' with the variable 'result'. Do not erase the 'return' keyword")
+    val result = radius * 3.1416 * 2
+    return result
+}
+fun main() {
+    task3(radius = 2.0)
 }

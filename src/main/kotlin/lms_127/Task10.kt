@@ -1,21 +1,29 @@
 package lms_127
 
 fun task10_1(assessments: String): Int {
-
-    return TODO("Replace this 'TODO' with the variable 'result'. Do not erase the 'return' keyword")
+    val result = assessments.length
+    return result
 }
 
 fun task10_2(assessments: String): Char {
-
-    return TODO("Replace this 'TODO' with the variable 'result'. Do not erase the 'return' keyword")
+    val result = assessments[3]
+    return result
 }
 
 fun task10_3(assessments: String): Char {
-
-    return TODO("Replace this 'TODO' with the variable 'result'. Do not erase the 'return' keyword")
+    val pos = assessments.length / 2
+    val result = assessments[pos]
+    return result
 }
 
 fun task10_4(assessments: String): String {
+    val result = assessments.subSequence(0, 3).toString()
 
-    return TODO("Replace this 'TODO' with the variable 'result'. Do not erase the 'return' keyword")
+    return result
+}
+fun main() {
+    task10_1(assessments = "LMHHF")
+    task10_2("LMFHMF")
+    task10_3("LMFHM")
+    task10_4(assessments = "LMFHM")
 }

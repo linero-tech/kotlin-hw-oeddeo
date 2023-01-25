@@ -1,6 +1,9 @@
 package lms_127
 
 fun task9(sentence: String, character: Char): Boolean {
-
-    return TODO("Replace this 'TODO' with the variable 'result'. Do not erase the 'return' keyword")
+    val result = (sentence.contains(character.uppercase())or sentence.contains(character.lowercase()))
+    return result
+}
+fun main() {
+    task9(sentence = "I code in KOTLIN", character = 'i')
 }
