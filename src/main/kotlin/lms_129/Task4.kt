@@ -1,6 +1,16 @@
 package lms_129
 
 fun task4(): Int {
+    var result = 0
+    for(nr in 1..1000) {
+        if(nr % 9 == 0) {
+            result = result + nr
+        }
+    }
 
-    return TODO("Replace this 'TODO' with the variable 'result'. Do not erase the 'return' keyword")
+    return result
+}
+fun main() {
+    val answer = task4()
+    println(answer)
 }

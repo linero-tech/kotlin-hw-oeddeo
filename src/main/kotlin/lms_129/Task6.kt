@@ -1,6 +1,15 @@
 package lms_129
 
 fun task6(number: Int): Int {
+    var newstrNumber = ""
+    for(pos in (number.toString().length -1) downTo 0) {
+        newstrNumber += number.toString()[pos]
 
-    return TODO("Replace this 'TODO' with the variable 'result'. Do not erase the 'return' keyword")
+    }
+    val result = newstrNumber.toInt()
+    return result
+}
+fun main() {
+    val answer = task6(678)
+    println(answer)
 }
