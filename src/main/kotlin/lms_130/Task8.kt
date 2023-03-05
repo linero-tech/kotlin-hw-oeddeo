@@ -2,5 +2,15 @@ package lms_130
 
 fun task8(items: List<Int>): List<Int> {
 
-    return TODO("Replace this 'TODO' with the variable 'result'. Do not erase the 'return' keyword")
+    var top3 = mutableListOf(items[0], items[1], items[2]).sorted().toMutableList()
+    items.forEach { item -> if(item > top3[0] && item !in top3) {
+        top3[0] = item
+        top3 = top3.sorted().toMutableList()
+
+    } }
+
+    return top3
+}
+fun main() {
+    print(task8(listOf(-100, -200, -500, -1, 1 )))
 }

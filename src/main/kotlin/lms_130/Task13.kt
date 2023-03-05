@@ -1,18 +1,28 @@
 package lms_130
 
 fun task13_1(customers: List<String>): List<String> {
-
-    return TODO("Replace this 'TODO' with the variable 'result'. Do not erase the 'return' keyword")
+    return customers.toSet().toList()
 }
 
 fun task13_2(customers: List<String>): List<String> {
-
-    return TODO("Replace this 'TODO' with the variable 'result'. Do not erase the 'return' keyword")
+    val double = mutableListOf<String>()
+    val result = mutableListOf<String>()
+    customers.forEach { customer -> if (customer !in result) {
+        result.add(customer)
+    }else {double.add(customer)} }
+    return double
 }
 
 fun task13_3(customers: List<String>): List<String> {
-
-    return TODO("Replace this 'TODO' with the variable 'result'. Do not erase the 'return' keyword")
+    val companies = mutableSetOf<String>()
+    customers.forEach { customer ->
+        run {
+            companies.add(
+                customer.split("@", ".")[1]
+            )
+        }
+    }
+    return companies.toList()
 }
 
 fun main() {
@@ -31,6 +41,7 @@ fun main() {
     )
 
     println("The customers who purchased from your product: ${task13_1(listOfCustomer)}")
+    println("${task13_1(listOfCustomer).size}")
     println("The customers that purchased multiple times include: ${task13_2(listOfCustomer)}")
     println("The companies that purchased from you include: ${task13_3(listOfCustomer)}")
 }
