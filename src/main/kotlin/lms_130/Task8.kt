@@ -9,8 +9,8 @@ fun task8(items: List<Int>): List<Int> {
 
     } }
 
-    return top3
+    return top3.toSet().toList()
 }
 fun main() {
-    print(task8(listOf(-100, -200, -500, -1, 1 )))
+    print(task8(listOf(-100, -100, -100)))
 }

@@ -5,12 +5,12 @@ fun task13_1(customers: List<String>): List<String> {
 }
 
 fun task13_2(customers: List<String>): List<String> {
-    val double = mutableListOf<String>()
-    val result = mutableListOf<String>()
-    customers.forEach { customer -> if (customer !in result) {
-        result.add(customer)
+    val double = mutableSetOf<String>()
+    val single = mutableListOf<String>()
+    customers.forEach { customer -> if (customer !in single) {
+        single.add(customer)
     }else {double.add(customer)} }
-    return double
+    return double.toList()
 }
 
 fun task13_3(customers: List<String>): List<String> {
