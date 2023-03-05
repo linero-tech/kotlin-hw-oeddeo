@@ -3,22 +3,16 @@ package lms_129
 import kotlin.math.truncate
 
 fun task9(temperature: String): String {
-
-
-    var temp = temperature.uppercase()
-    val result = if ("F" in temp) {
-        temp = temp.replace("F", "")
-        truncate(((temp.toFloat() -32)/9 *5)).toString().split(".")[0] + "C"
-
+    val temp = temperature.dropLast(1).toFloat()
+    val result = if (temperature.contains("f", ignoreCase = true)) {
+        truncate((temp -32)/9 *5).toInt().toString() + "C"
     }
-    else if ("C" in temp) {
-        temp = temp.replace("C", "")
-        truncate(((temp.toFloat() / 5) * 9 + 32)).toString().split(".")[0] + "F"
+    else {
+        truncate((temp / 5) * 9 + 32).toInt().toString() + "F"
     }
-    else {}
-    return result.toString()
+    return result
 }
 fun main() {
-    val answer = task9("2F")
+    val answer = task9("-20f")
     println(answer)
 }
